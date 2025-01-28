@@ -1,0 +1,67 @@
+{
+  "layer": "top",
+  "position": "top",
+  "height": 24,
+  "spacing": 4,
+  "modules-left": ["custom/launcher", "hyprland/workspaces", "window"],
+  "modules-center": ["cpu", "memory", "network", "pulseaudio"],
+  "modules-right": ["battery", "clock", "tray"],
+  "custom/launcher": {
+    "format": "", /* Replace with your preferred icon */
+    "on-click": "rofi -show drun", /* Launcher command */
+    "tooltip": false
+  },
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "on-click": "activate",
+    "active-only": false,
+    "format-icons": {
+      "1": "", /* Workspace 1 icon */
+      "2": "", /* Workspace 2 icon */
+      "3": "", /* Workspace 3 icon */
+      "4": "", /* Workspace 4 icon */
+      "5": "", /* Workspace 5 icon */
+      "6": "", /* Workspace 6 icon */
+      "7": "", /* Workspace 7 icon */
+      "8": "", /* Workspace 8 icon */
+      "9": ""  /* Workspace 9 icon */
+    }
+  },
+  "window": {
+    "format": "{}",
+    "max-length": 110
+  },
+  "cpu": {
+    "format": "  {usage}%", /* CPU usage */
+    "interval": 5
+  },
+  "memory": {
+    "format": "  {used:0.1f}G/{total:0.1f}G", /* Memory usage */
+    "interval": 5
+  },
+  "network": {
+    "format-wifi": "  {essid} ({signalStrength}%)", /* WiFi */
+    "format-ethernet": "  {ifname}", /* Ethernet */
+    "format-disconnected": "  Disconnected", /* Disconnected */
+    "interval": 5
+  },
+  "pulseaudio": {
+    "format": "{icon}  {volume}%", /* Volume */
+    "format-icons": {
+      "default": ["", "", ""] /* Volume icons */
+    },
+    "on-click": "pavucontrol" /* Volume control */
+  },
+  "battery": {
+    "format": "{icon}  {capacity}%", /* Battery */
+    "format-icons": ["", "", "", "", ""], /* Battery icons */
+    "interval": 10
+  },
+  "clock": {
+    "format": "  {:%a, %B %d %I:%M %p}", /* Clock */
+    "interval": 1
+  },
+  "tray": {
+    "spacing": 10
+  }
+}
